@@ -43,3 +43,6 @@ Simplemente escribimos en la línea de comandos: **deactivate**
 
 - **Credenciales del controlador:** los scripts usan el usuario `cisco` y la clave `cisco123!`. Si en tu Network Controller creaste otro usuario, cambialos en `01_get-ticket.py` y en `04_tabulate.py`.
 - **Ticket (X-Auth-Token):** `02_get-network-device.py` y `03_get-host.py` traen escrito un ticket de ejemplo que **no va a funcionar** en tu Packet Tracer, porque el controlador genera uno nuevo en cada sesión y vence. Ejecutá primero `01_get-ticket.py`, copiá el ticket que muestra y reemplazalo en el header `X-Auth-Token` de esos dos scripts. `04_tabulate.py` no necesita este paso: pide el ticket solo.
+
+## 6. 05_inventario_csv.py
+Script en Python que consume la API REST de Cisco DNA Center para obtener los equipos de red y los hosts conectados, y los exporta a un archivo inventario.csv con su nombre, IP, plataforma o MAC y punto de conexión.
